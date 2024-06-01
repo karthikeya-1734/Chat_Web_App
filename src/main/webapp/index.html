@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello kk</title>
+    <title>Get Name</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    Welcome to java Servlet kk
+    <div class="container">
+        <h1>Enter Your Name</h1>
+        <form id="nameForm" action="name" method="post">
+            <label for="nameInput">Name:</label>
+            <input type="text" name="name" required>
+            <button type="submit" value="login">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
