@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/name")
-public class ChatServlet extends HttpServlet {
+public class IndexPage extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest req,HttpServletResponse res) throws ServletException, IOException{
@@ -21,5 +21,8 @@ public class ChatServlet extends HttpServlet {
         n.setName(name);
         NameDB ndb = new NameDB();
         ndb.main(n);
+        res.setContentType("text/html");
+        req.getRequestDispatcher("chat.html").forward(req,res);
+        
     }
 }
